@@ -47,16 +47,39 @@ HTMB Full App/
 
 ## Backend Configuration
 
+### Environment Variables
+
 Configure these environment variables before running the Spring Boot backend:
 
 ```properties
 DB_URL=jdbc:mysql://localhost:3306/htmb_db
 DB_USERNAME=your_mysql_username
 DB_PASSWORD=your_mysql_password
-JWT_SECRET=your_long_random_secret
+JWT_SECRET=your_base64_encoded_secret
 ```
 
 These are environment variable examples. Spring Boot must receive the variables through your operating system or IDE run configuration; a `.env` file is not automatically loaded.
+
+### application.properties
+
+Open:
+
+`htmb-backend/src/main/resources/application.properties`
+
+Configure the backend properties:
+
+```properties
+spring.application.name=htmb-backend
+
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+
+htmb.jwt.secret=${JWT_SECRET}
+htmb.jwt.expiration=3600000
+```
+
+The values inside `${...}` are supplied by the environment variables configured above.
 
 ## Running the Backend
 
@@ -72,8 +95,37 @@ Make sure the database is running and the required environment variables are con
 
 1. Open the `HTMB-app` folder in Android Studio.
 2. Allow Gradle to sync.
-3. Configure the backend API address for your device or emulator.
+3. Configure the backend API address in the API Client.
 4. Run the application.
+
+### API Base URL Configuration
+
+Open the API Client file in the Android project and locate the `BASE_URL` variable.
+
+The base URL tells the Android application where to send API requests.
+
+**For Android Emulator:**
+
+```java
+private static final String BASE_URL =
+        "http://10.0.2.2:8080/";
+```
+
+**For a Physical Android Device:**
+
+```java
+private static final String BASE_URL =
+        "http://YOUR_COMPUTER_LOCAL_IP:8080/";
+```
+
+Replace `YOUR_COMPUTER_LOCAL_IP` with your computer's local IP address.
+
+**Important:**
+- For an Android Emulator, use `10.0.2.2` to access the backend running on your computer.
+- For a physical Android device, connect your phone and computer to the same Wi-Fi network.
+- Make sure the Spring Boot backend is running.
+- Do not use `localhost` for a physical Android device because it refers to the phone itself.
+- Use HTTPS when connecting to a publicly deployed backend.
 
 ## Disclaimer
 
