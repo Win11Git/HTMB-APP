@@ -81,4 +81,4 @@ HTMB is a learning and development project. It is not a real banking service and
 
 ## Author
 
-Developed as a personal software development project.
+Herwin Magana
