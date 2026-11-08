@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/htmb_dark_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <ImageButton
+            android:id="@+id/loginBackButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="start"
+            android:layout_marginBottom="24dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Go back"
+            android:padding="12dp"
+            android:src="@drawable/baseline_arrow_back_24"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="HTMB"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Welcome"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/app_text" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="32dp"
+            android:text="Login to your HTMB account"
+            android:textColor="@color/app_text"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/phoneInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="16dp"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            android:maxLength="13"
+            android:padding="14dp" />
+
+        <EditText
+            android:id="@+id/pinInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+
+            android:hint="4-Digit PIN"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            android:padding="14dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:fontFamily="sans-serif-black"
+            android:text="LOGIN"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="@color/app_primary" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="5dp"
+            android:text="High Trust Management Bank"
+            android:textAlignment="center"
+            android:textColor="@color/app_text"
+            android:textSize="15sp" />
+
+
+    </LinearLayout>
+</ScrollView>

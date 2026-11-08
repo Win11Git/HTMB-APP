@@ -1,0 +1,7 @@
+POST http://localhost:8080/api/deposit
+Content-Type: application/json
+
+{
+  "userId": 7284776600000001,
+  "amount": 500.00
+}

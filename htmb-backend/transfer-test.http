@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/transfer
+Content-Type: application/json
+
+{
+  "senderUserId": 7284776600000001,
+  "recipientMobileNumber": "09171234567",
+  "amount": 100.00
+}

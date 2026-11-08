@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Light Mode -->
+    <color name="light_background">#ffffff</color>
+    <color name="light_text">#000000</color>
+    <color name="light_primary">#228b22</color>
+
+    <!-- Dark Mode -->
+    <color name="dark_background">#000000</color>
+    <color name="dark_text">#ffffff</color>
+    <color name="dark_primary">#000000</color>
+
+    <!-- Default app colors: Light Mode -->
+    <color name="app_background">#ffffff</color>
+    <color name="app_text">#000000</color>
+    <color name="app_primary">#000000</color>
+    <color name="app_textsecondary">#000000</color>
+
+
+
+</resources>

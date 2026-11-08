@@ -1,0 +1,6 @@
+POST http://localhost:8080/api/transaction-history
+Content-Type: application/json
+
+{
+  "userId": 7284776600000003
+}

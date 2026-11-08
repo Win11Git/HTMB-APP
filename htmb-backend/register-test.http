@@ -1,0 +1,9 @@
+
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+  "name": "Juan Dela Cruz",
+  "mobileNumber": "09171234567",
+  "pin": "1234"
+}
