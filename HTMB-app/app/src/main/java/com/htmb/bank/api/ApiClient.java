@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 public class ApiClient {
 
     private static final String BASE_URL =
-            "http://192.168.100.6:8080";
+            "http://192.168.x.x:8080";
 
     public static String request(
             String method,
