@@ -12,14 +12,8 @@ import org.springframework.stereotype.Service;
 import javax.crypto.SecretKey;
 import java.util.Date;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 @Service
 public class JwtService {
-
-    private static final Logger logger =
-            LoggerFactory.getLogger(JwtService.class);
 
     @Value("${htmb.jwt.secret}")
     private String secret;
@@ -59,8 +53,6 @@ public class JwtService {
             extractUserId(token);
             return true;
         } catch (Exception e) {
-            logger.warn("JWT validation failed: {}",
-                    e.getClass().getSimpleName());
             return false;
         }
     }
